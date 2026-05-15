@@ -20,7 +20,7 @@ prompt = PromptTemplate(
 
 parser = StrOutputParser()
 
-url = 'https://en.wikipedia.org/wiki/Artificial_intelligence'
+url = 'https://python.langchain.com/docs/introduction/'
 loader = WebBaseLoader(url)
 
 docs = loader.load()
@@ -28,4 +28,4 @@ docs = loader.load()
 
 chain = prompt | model | parser
 
-print(chain.invoke({'question':'What is the thing and  importance of that thing that we are talking about?', 'text':docs[0].page_content}))
+print(chain.invoke({'question':'What is the product that we are talking about?', 'text':docs[0].page_content}))
